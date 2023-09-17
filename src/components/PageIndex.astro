@@ -1,0 +1,31 @@
+---
+import styles from "~/styles/components/PageIndex.module.scss";
+import { Image } from "astro:assets";
+import Layout from "~/components/Layout.astro";
+---
+
+<Layout title="">
+  <div class={styles.page}>
+    <div class={styles.inner}>
+      <div class={styles.kv}>
+        <p class={styles.copy}>This is Astro Template</p>
+      </div>
+
+      <ul>
+        {
+          [...Array(2)].map((_, i) => (
+            <li>
+              <Image
+                src={`/images/sample_0${i + 1}.jpg`}
+                width={500}
+                height={300}
+                alt=""
+                format="webp"
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</Layout>

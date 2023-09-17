@@ -1,0 +1,51 @@
+@use 'sass:math';
+
+// breakpoints
+$breakpoints: (
+  'sm': 576px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+);
+
+// design size
+$design-size: (
+  'pc-width': 1366,
+  'pc-height': 768,
+  'sp-width': 375,
+  'sp-height': 667,
+);
+
+//（手書きのstyleで登場するものは、map-getするとき補完が効かず不便なので普通に列挙する）
+// color
+$color-white: #ffffff;
+$color-black: #000;
+
+// font-family
+$font-yu-go: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium',
+  '游ゴシック', 'Yu Gothic';
+$font-en: 'Helvetica Neue';
+$font-ja: $font-yu-go, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro',
+  Verdana, Meiryo;
+
+// z-index
+$z-index-global-header: 100;
+$z-index-modal: 1000;
+$z-index-loading: 10000;
+
+// layout
+$global-header-height-pc: 82;
+$global-header-height-sp: 66;
+
+$padding-side-pc: 114;
+$padding-side-sp: 32;
+
+// animation
+$ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+$ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+
+$ease-base-transform: $ease-out-quint;
+$ease-base-material: linear;
+
+$duration-base-transform: 0.6s;
+$duration-base-material: 0.2s;
