@@ -14,6 +14,9 @@
     "destyle.css": "^4.0.0"
   },
   "devDependencies": {
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-astro": "^0.29.0",
     "prettier": "^3.0.3",
     "prettier-plugin-astro": "^0.12.0",
     "sass": "^1.67.0"
