@@ -6,7 +6,8 @@
     "node": true
   },
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaVersion": 2023
   },
   "rules": {
     "no-console": "warn"
