@@ -5,8 +5,8 @@ import swup from '@swup/astro';
 export default defineConfig({
   server: {
     port: 3000,
+    host: true,
   },
-
   integrations: [
     swup({
       // theme: false, //デフォルトで用意されている遷移アニメーションは使用しない
