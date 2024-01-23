@@ -3,22 +3,81 @@
 @use '~/styles/base/functions' as *;
 
 :root {
+  // --- variables ---
+  // layout
+  --font-size: 16px;
+  --line-height: 1.75;
+  --line-height-px: calc(var(--font-size) * var(--line-height));
+  --padding-side: 32;
+  --z-index-global-header: 1000;
+  --z-index-global-loading: 99999;
+
+  // font
+  --font-ja: '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium',
+    '游ゴシック', 'Yu Gothic', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro';
+  --font-en: 'Helvetica Neue';
+
+  // color
+  --color-white: #fff;
+  --color-black: #000;
+
+  --color-bg: #fff;
+  --color-text: #000;
+  --color-scrollbar: #8c8c8c;
+
+  // animation
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --ease-base-transform: var(--ease-out-quint);
+  --ease-base-material: linear;
+
+  --duration-base-transform: 0.6s;
+  --duration-base-material: 0.2s;
+
+  &[data-theme='dark'] {
+    --color-bg: #0f0f0f;
+    --color-text: #fff;
+  }
+
+  @include mq() {
+    --font-size: 14px;
+  }
+
+  // --- ---
+
   width: 100%;
-  font-size: 16px;
+  font-family: var(--font-en), monospace;
+  font-size: var(--font-size);
+
+  // scrollbarカスタマイズ
+  @media (hover: hover) and (pointer: fine) {
+    &::-webkit-scrollbar {
+      width: 6px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-scrollbar);
+    }
+  }
 }
 
 body {
   width: 100%;
-  font-family: $font-en, $font-ja, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // overscroll-behavior: none;
+  overscroll-behavior: none;
+  overflow-x: hidden;
 
-  color: $color-black;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: var(--line-height);
 }
 
 img,
-svg {
+svg,
+video {
   width: 100%;
   height: auto;
 }

@@ -37,7 +37,7 @@
 }
 
 @mixin focused-outline() {
-  outline: solid 2px $color-black;
+  outline: solid 2px var(--color-text);
   outline-offset: 1px;
 }
 
@@ -45,12 +45,13 @@
   &::-webkit-scrollbar {
     width: 6px;
     height: 6px;
-    background-color: $color-bg;
+    background-color: var(--color-bg);
     padding: 6px;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: rgba($color-black, 0.2);
+    background-color: var(--color-bg);
+    opacity: 0.2;
     border-radius: 100vh;
   }
 }

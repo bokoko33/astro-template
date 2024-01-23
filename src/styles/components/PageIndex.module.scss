@@ -7,7 +7,7 @@
 }
 
 .inner {
-  padding: 0 #{$padding-side-pc}px;
+  padding: 0 calc(var(--padding-side) * 1px);
 }
 
 .kv {
