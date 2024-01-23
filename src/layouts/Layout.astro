@@ -1,8 +1,4 @@
 ---
-import 'destyle.css';
-import '~/styles/app.scss';
-import GlobalHeader from '~/components/GlobalHeader.astro';
-
 export interface Props {
   title?: string;
   description?: string;
@@ -24,16 +20,6 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <GlobalHeader />
-
-    <main>
-      <slot />
-    </main>
+    <slot />
   </body>
 </html>
-
-<script>
-  import { initApp } from '~/scripts/app.js';
-
-  initApp();
-</script>

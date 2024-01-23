@@ -1,5 +1,11 @@
 ---
 import PageAbout from '~/components/PageAbout.astro';
+import Wrapper from '~/components/Wrapper.astro';
+import Layout from '~/layouts/Layout.astro';
 ---
 
-<PageAbout />
+<Layout title="Home">
+  <Wrapper>
+    <PageAbout />
+  </Wrapper>
+</Layout>
